@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallpaper Download</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+    }
+    .ad-left, .ad-right {
+      width: 120px;
+      background-color: #ccc;
+      height: 600px;
+      position: fixed;
+      top: 100px;
+    }
+    .ad-left {
+      left: 0;
+    }
+    .ad-right {
+      right: 0;
+    }
+    main {
+      margin: 30px;
+      max-width: 600px;
+      text-align: center;
+    }
+    .download-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 25px;
+      font-size: 16px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    let clicked = false;
+    function handleClick(btn, monetagURL, downloadURL) {
+      if (!clicked) {
+        clicked = true;
+        window.open(monetagURL, "_blank");
+      } else {
+        window.location.href = downloadURL;
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Download HD Wallpapers</h1>
+  </header>
+  <div class="ad-left">
+    <!-- Adsterra Left Ad Code -->
+  </div>
+  <div class="ad-right">
+    <!-- Adsterra Right Ad Code -->
+  </div>
+  <main>
+    <h2>Choose Your Wallpaper</h2>
+    <a href="#" class="download-btn" onclick="handleClick(this, 'https://monetag.com/ad-link', 'https://drive.google.com/your-download-link')">Download Wallpaper 1</a>
+    <a href="#" class="download-btn" onclick="handleClick(this, 'https://monetag.com/ad-link', 'https://drive.google.com/your-download-link-2')">Download Wallpaper 2</a>
+  </main>
+</body>
+</html>
