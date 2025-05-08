@@ -4,79 +4,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wallpaper Download</title>
+  <title>Download HD Wallpaper</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
+      background-color: #111;
       width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffcc;
     }
-    .ad-left, .ad-right {
-      width: 120px;
-      background-color: #ccc;
-      height: 600px;
-      position: fixed;
-      top: 100px;
+
+    .ad-section {
+      width: 100%;
+      text-align: center;
+      margin: 15px 0;
     }
-    .ad-left {
-      left: 0;
-    }
-    .ad-right {
-      right: 0;
-    }
-    main {
-      margin: 30px;
+
+    .container {
       max-width: 600px;
+      margin: 20px;
+      background-color: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
       text-align: center;
     }
+
+    .wallpaper-preview {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
     .download-btn {
-      display: block;
-      margin: 20px auto;
-      padding: 15px 25px;
-      font-size: 16px;
-      background-color: #28a745;
+      background-color: #00cc66;
       color: white;
+      padding: 12px 24px;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
       text-decoration: none;
+      display: inline-block;
+    }
+
+    .download-btn:hover {
+      background-color: #00994d;
+    }
+
+    .notice {
+      color: #ffcc00;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
   <script>
-    let clicked = false;
-    function handleClick(btn, monetagURL, downloadURL) {
-      if (!clicked) {
-        clicked = true;
-        window.open(monetagURL, "_blank");
+    let clickCount = 0;
+
+    function handleDownload() {
+      clickCount++;
+      if (clickCount <= 2) {
+        window.open("https://sawutser.top/4/9292122", "_blank");
+      } else if (clickCount === 3) {
+        window.location.href = "https://drive.google.com/drive/folders/1LozlDuDb-Dp1KCEtb7sLZPMRMq8tPM37";
       } else {
-        window.location.href = downloadURL;
+        alert("You have already downloaded the wallpaper.");
       }
     }
   </script>
 </head>
 <body>
-  <header>
-    <h1>Download HD Wallpapers</h1>
-  </header>
-  <div class="ad-left">
-    <!-- Adsterra Left Ad Code -->
+  <header>HD Live Wallpaper Download</header>
+
+  <div class="ad-section">
+    <!-- Ad Placeholder (Adsterra) -->
+    <div style="background:#333;padding:10px;color:#bbb;">Ad Space</div>
   </div>
-  <div class="ad-right">
-    <!-- Adsterra Right Ad Code -->
+
+  <div class="container">
+    <p class="notice">Click any button 3 times. First 2 times will show ads. On 3rd click, download will start.</p>
+    <img src="https://via.placeholder.com/500x300.png?text=Wallpaper+Preview" alt="Wallpaper Preview" class="wallpaper-preview" />
+    <div>
+      <button class="download-btn" onclick="handleDownload()">Download 1</button>
+      <button class="download-btn" onclick="handleDownload()">Download 2</button>
+      <button class="download-btn" onclick="handleDownload()">Download 3</button>
+      <button class="download-btn" onclick="handleDownload()">Download 4</button>
+    </div>
   </div>
-  <main>
-    <h2>Choose Your Wallpaper</h2>
-    <a href="#" class="download-btn" onclick="handleClick(this, 'https://monetag.com/ad-link', 'https://drive.google.com/your-download-link')">Download Wallpaper 1</a>
-    <a href="#" class="download-btn" onclick="handleClick(this, 'https://monetag.com/ad-link', 'https://drive.google.com/your-download-link-2')">Download Wallpaper 2</a>
-  </main>
+
+  <div class="ad-section">
+    <!-- Ad Placeholder (Adsterra) -->
+    <div style="background:#333;padding:10px;color:#bbb;">Ad Space</div>
+  </div>
+
+  <footer>
+    &copy; 2025 WallpaperHub. All rights reserved.
+  </footer>
 </body>
 </html>
